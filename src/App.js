@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Header from './components/header';
+import InputForm from './components/input components/inputForm'
+import Logs from './components/logs';
+import React, { useState, useEffect } from 'react'
+const axios = require('axios')
 
 function App() {
+
+  const [logs, setLogs] = useState([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get('http://localhost:8000/api/logs')
+      console.log(response.data)
+      setLogs(response.data)
+    }
+    fetchData()
+
+  }, [])
+
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <Header />
+      <InputForm />
+      <Logs logs={logs} />
     </div>
   );
 }
