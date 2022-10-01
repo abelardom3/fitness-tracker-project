@@ -32,24 +32,25 @@ const EditPopup = ({ close, log, updateLogs }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
     }
-    const handleChange = (e, nameOf) => {
-        console.log(nameOf)
-        setNewInput({ ...newInput, nameOf: e.target.value })
-        // setNewInput({ ...newInput, duration: e.target.value })
-        // setNewInput({ ...newInput, date: e.target.value })
-
+    const handleWorkout = (e) => {
+        setNewInput({ ...newInput, workout: e.target.value })
     }
-
+    const handleDuration = (e) => {
+        setNewInput({ ...newInput, duration: e.target.value })
+    }
+    const handleDate = (e) => {
+        setNewInput({ ...newInput, date: e.target.value })
+    }
 
     return (
         <div className="popup-box">
             <form onSubmit={handleSubmit}>
                 <label>Workout</label>
-                <input type="text" value={newInput.workout} onChange={(e) => { handleChange(e, newInput.workout) }} />
+                <input type="text" value={newInput.workout} onChange={handleWorkout} />
                 <label>duration</label>
-                <input type="text" value={newInput.duration} onChange={handleChange} />
+                <input type="text" value={newInput.duration} onChange={handleDuration} />
                 <label>date</label>
-                <input type="text" value={newInput.date} onChange={handleChange} />
+                <input type="text" value={newInput.date} onChange={handleDate} />
                 <button onClick={() => { editData(log.fit_id) }}>Update</button>
             </form>
             {error && <p>need new edit</p>}
