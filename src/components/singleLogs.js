@@ -35,7 +35,7 @@ const SingleLogs = ({ log, updateLogs }) => {
         )
 
     } else {
-        return < EditPopup open={open} close={closePopup} log={log} />
+        return < EditPopup close={closePopup} log={log} updateLogs={updateLogs} />
     }
 
 
