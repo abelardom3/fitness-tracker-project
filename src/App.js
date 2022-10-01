@@ -8,6 +8,13 @@ const axios = require('axios')
 function App() {
 
   const [logs, setLogs] = useState([])
+  const [count, setCount] = useState(0)
+  const [input, setInput] = useState({
+    workout: '',
+    duration: '',
+    date: ''
+  })
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,7 +24,37 @@ function App() {
     }
     fetchData()
 
-  }, [])
+  }, [count])
+
+
+  // I think i got it to work 
+
+
+  const workoutChange = (e) => {
+    setInput({ ...input, workout: e.target.value })
+  }
+
+  const durationChange = (e) => {
+    setInput({ ...input, duration: e.target.value })
+  }
+
+  const dateChange = (e) => {
+    setInput({ ...input, date: e.target.value })
+  }
+
+  const clearForm = () => {
+    setInput({ ...input, workout: '', duration: '', date: '' })
+    updateLogs()
+  }
+
+  const updateLogs = () => {
+    setCount(count + 1)
+
+  }
+
+
+
+
 
 
 
@@ -26,8 +63,8 @@ function App() {
   return (
     <div className='container'>
       <Header />
-      <InputForm />
-      <Logs logs={logs} />
+      <InputForm input={input} workoutChange={workoutChange} durationChange={durationChange} dateChange={dateChange} clearForm={clearForm} />
+      <Logs logs={logs} updateLogs={updateLogs} />
     </div>
   );
 }

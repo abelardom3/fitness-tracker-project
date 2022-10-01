@@ -3,12 +3,14 @@ import SingleLogs from './singleLogs'
 
 
 
-const Logs = ({ logs }) => {
+const Logs = ({ logs, updateLogs }) => {
     return (
-        <>
-            <h1>view logs</h1>
-            <SingleLogs logs={logs} />
-        </>
+        <div className="log-container">
+            <h1>View logs</h1>
+            {logs.map((log) => (
+                <SingleLogs log={log} key={log.fit_id} updateLogs={updateLogs} />
+            ))}
+        </div>
     )
 }
 

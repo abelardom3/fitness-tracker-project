@@ -1,23 +1,20 @@
-import e from "cors";
-import React, { useState } from "react";
+
+
 import InputField from "./inputField";
 
 
-const InputForm = () => {
-
+const InputForm = ({ input, workoutChange, durationChange, dateChange, clearForm }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log()
     }
-
 
     return (
         <>
             <form className="input-form" onSubmit={handleSubmit} >
                 <h1>Logger</h1>
                 <div className="input-box">
-                    <InputField />
+                    <InputField input={input} workoutChange={workoutChange} durationChange={durationChange} dateChange={dateChange} clearForm={clearForm} />
                 </div>
             </form>
         </>
