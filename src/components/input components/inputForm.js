@@ -12,7 +12,7 @@ const InputForm = ({ input, workoutChange, durationChange, dateChange, clearForm
     return (
         <>
             <form className="input-form" onSubmit={handleSubmit} >
-                <h1>Logger</h1>
+                <h1 className="input-new-text">New Workout</h1>
                 <div className="input-box">
                     <InputField input={input} workoutChange={workoutChange} durationChange={durationChange} dateChange={dateChange} clearForm={clearForm} />
                 </div>

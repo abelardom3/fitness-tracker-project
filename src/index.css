@@ -4,12 +4,45 @@
     box-sizing: border-box;
 }
 
+body {
+    background-image: url('https://cyclingmagazine.ca/wp-content/uploads/2021/08/GettyImages-1213615970.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#root {
+    font-family: 'Nunito', sans-serif;
+    color: #ffff;
+}
 
 .header {
     display: flex;
     justify-content: center;
+    background-color: #303036;
+    width: auto;
+    height: 5rem;
+    margin-bottom: 15rem;
+}
+
+.header-text {
+    margin: auto;
+    font-family: 'Nunito', sans-serif;
+    color: #ffff;
 
 }
+
+.f-text {
+    font-size: larger;
+}
+
+.t-text {
+    font-size: larger;
+}
+
+
+
+
+
 
 .main-page {
     display: flex;
@@ -21,7 +54,17 @@
     display: flex;
     flex-direction: column;
     width: 20rem;
+    height: 21rem;
+    background-color: #303036;
+    padding-left: 40px;
+    padding-top: 10px;
 }
+
+.input-new-text {
+    margin-bottom: 10px;
+}
+
+
 
 
 .input-box {
@@ -33,6 +76,9 @@
 .field {
     display: flex;
     flex-direction: column;
+    margin: 5px;
+    width: auto;
+    height: 4rem;
 }
 
 
