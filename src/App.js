@@ -15,7 +15,6 @@ function App() {
     date: ''
   })
 
-
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get('http://localhost:8000/api/logs')
@@ -25,9 +24,6 @@ function App() {
     fetchData()
 
   }, [count])
-
-
-  // I think i got it to work 
 
 
   const workoutChange = (e) => {
@@ -52,19 +48,15 @@ function App() {
 
   }
 
-
-
-
-
-
-
-
-
   return (
     <div className='container'>
       <Header />
-      <InputForm input={input} workoutChange={workoutChange} durationChange={durationChange} dateChange={dateChange} clearForm={clearForm} />
-      <Logs logs={logs} updateLogs={updateLogs} />
+      <div className='main-page'>
+        <InputForm input={input} workoutChange={workoutChange} durationChange={durationChange} dateChange={dateChange} clearForm={clearForm} />
+        <Logs logs={logs} updateLogs={updateLogs} />
+
+      </div>
+
     </div>
   );
 }

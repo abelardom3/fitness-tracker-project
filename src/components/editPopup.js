@@ -4,7 +4,6 @@ import axios from "axios";
 
 const EditPopup = ({ close, log, updateLogs }) => {
 
-
     const [newInput, setNewInput] = useState(log)
     const [error, setError] = useState(false)
 
@@ -20,9 +19,6 @@ const EditPopup = ({ close, log, updateLogs }) => {
         }
 
     }
-
-
-
 
 
     const handleXClick = () => {

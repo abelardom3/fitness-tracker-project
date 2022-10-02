@@ -1,0 +1,69 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.header {
+    display: flex;
+    justify-content: center;
+
+}
+
+.main-page {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+}
+
+
+.input-box {
+    display: flex;
+    width: 15rem;
+    flex-direction: column;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.log-container {
+    display: flex;
+    flex-direction: column;
+    width: 45rem;
+}
+
+.log-header {
+    width: 45rem;
+    text-align: center;
+}
+
+.log-box {
+    display: flex;
+    margin: 5px;
+
+}
+
+.log-text {
+    margin: 5px;
+}
+
+.edit-btn {
+    width: 4rem;
+    margin: 5px;
+}
+
+.delete-btn {
+    width: 4rem;
+    margin: 5px;
+}

@@ -3,8 +3,6 @@ import React from "react";
 import EditPopup from "./editPopup";
 import { useState } from "react";
 
-
-
 const SingleLogs = ({ log, updateLogs }) => {
 
     const [open, setOpen] = useState(false)
@@ -19,7 +17,6 @@ const SingleLogs = ({ log, updateLogs }) => {
     const handleEdit = (id) => {
         setOpen(true)
     }
-
 
     const closePopup = () => {
         setOpen(false)
@@ -37,8 +34,6 @@ const SingleLogs = ({ log, updateLogs }) => {
     } else {
         return < EditPopup close={closePopup} log={log} updateLogs={updateLogs} />
     }
-
-
 
 }
 
