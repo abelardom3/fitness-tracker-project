@@ -35,22 +35,23 @@ const EditPopup = ({ close, log, updateLogs }) => {
         setNewInput({ ...newInput, duration: e.target.value })
     }
     const handleDate = (e) => {
-        setNewInput({ ...newInput, date: e.target.value })
+        setNewInput({ ...newInput, to_char: e.target.value })
     }
 
     return (
         <div className="popup-box">
-            <form onSubmit={handleSubmit}>
+            <form className="popup-form" onSubmit={handleSubmit}>
                 <label>Workout</label>
-                <input type="text" value={newInput.workout} onChange={handleWorkout} />
-                <label>duration</label>
-                <input type="text" value={newInput.duration} onChange={handleDuration} />
-                <label>date</label>
-                <input type="text" value={newInput.date} onChange={handleDate} />
-                <button onClick={() => { editData(log.fit_id) }}>Update</button>
+                <input className="pop-input" type="text" value={newInput.workout} onChange={handleWorkout} />
+                <label>Duration</label>
+                <input className="pop-input" type="text" value={newInput.duration} onChange={handleDuration} />
+                <label>Date</label>
+                <input className="pop-input" type="text" value={newInput.to_char} onChange={handleDate} />
+                <button className="update-btn" onClick={() => { editData(log.fit_id) }}><ion-icon name="create"></ion-icon></button>
+                <button className="close-edit-btn" onClick={handleXClick}><ion-icon name="close"></ion-icon></button>
             </form>
             {error && <p>need new edit</p>}
-            <button onClick={handleXClick}>X</button>
+
 
         </div>
 

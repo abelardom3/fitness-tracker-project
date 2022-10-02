@@ -12,7 +12,7 @@ function App() {
   const [input, setInput] = useState({
     workout: '',
     duration: '',
-    date: ''
+    to_char: ''
   })
 
   useEffect(() => {
@@ -35,11 +35,11 @@ function App() {
   }
 
   const dateChange = (e) => {
-    setInput({ ...input, date: e.target.value })
+    setInput({ ...input, to_char: e.target.value })
   }
 
   const clearForm = () => {
-    setInput({ ...input, workout: '', duration: '', date: '' })
+    setInput({ ...input, workout: '', duration: '', to_char: '' })
     updateLogs()
   }
 

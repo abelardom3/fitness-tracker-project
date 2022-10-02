@@ -22,7 +22,7 @@ body {
     background-color: #303036;
     width: auto;
     height: 5rem;
-    margin-bottom: 15rem;
+    margin-bottom: 14rem;
 }
 
 .header-text {
@@ -57,16 +57,26 @@ body {
     flex-direction: column;
     width: 20rem;
     height: 21rem;
-    background-color: #303036;
+    /* background-color: #303036; */
     padding-left: 40px;
+
     padding-top: 10px;
 }
 
 .input-new-text {
     margin-bottom: 10px;
     color: #ffd60a;
+    background: #303036;
+    padding-left: inherit;
 }
 
+.input-add-btn {
+    width: 5rem;
+    height: 2rem;
+    background: #303036;
+    color: #ffd60a;
+    margin: auto;
+}
 
 
 
@@ -74,7 +84,30 @@ body {
     display: flex;
     width: 15rem;
     flex-direction: column;
+
 }
+
+.input-box-new {
+    border: none;
+    color: #303036;
+    border-radius: 0;
+    background:
+        linear-gradient(90deg, #303036, #303036) left bottom/100% 2px no-repeat;
+    border-bottom-color: #303036;
+    width: 200px;
+    outline: none;
+    font-size: 18px;
+    font-family: 'Quicksand', sans-serif;
+    padding: 1px;
+}
+
+
+.label-text-input {
+    color: #303036;
+}
+
+
+
 
 .field {
     display: flex;
@@ -89,30 +122,110 @@ body {
 .log-container {
     display: flex;
     flex-direction: column;
-    width: 45rem;
+    width: 57rem;
+    height: 30rem;
+    overflow: auto
 }
 
 .log-header {
-    width: 45rem;
+    width: 55rem;
     text-align: center;
+    background: #303036;
+    color: #ffd60a;
 }
 
 .log-box {
     display: flex;
     margin: 5px;
-
+    color: #ffd60a;
+    width: 55rem;
+    padding-left: 10px;
+    justify-content: space-between;
 }
+
+.log-btn {
+    width: 10rem;
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .log-text {
     margin: 5px;
+    color: #303036;
 }
 
 .edit-btn {
     width: 4rem;
     margin: 5px;
+    background: #303036;
+    color: #ffd60a;
 }
 
 .delete-btn {
     width: 4rem;
     margin: 5px;
+    background: #303036;
+    color: #ffd60a;
+}
+
+
+.popup-box {
+    margin: 5px;
+    color: #ffd60a;
+    padding-left: 10px
+}
+
+.popup-form {
+    margin: 5px;
+    color: #303036;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pop-input {
+    border: none;
+    color: #303036;
+    border-radius: 0;
+    background:
+        linear-gradient(90deg, #303036, #303036) left bottom/100% 2px no-repeat;
+    border-bottom-color: #303036;
+    width: 175px;
+    outline: none;
+    font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
+    padding: 1px;
+}
+
+.update-btn {
+    margin-left: 15px;
+    width: 2rem;
+    background: #303036;
+    color: #ffd60a;
+}
+
+.close-edit-btn {
+    margin-left: 15px;
+    width: 2rem;
+    background: #303036;
+    color: #ffd60a;
+
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffd60a;
+    border-radius: 100vw;
+    border: 2px solid #303036;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 100vw;
+    background: #303036;
+
+
 }

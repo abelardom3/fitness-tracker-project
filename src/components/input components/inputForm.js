@@ -3,6 +3,7 @@
 import InputField from "./inputField";
 
 
+
 const InputForm = ({ input, workoutChange, durationChange, dateChange, clearForm }) => {
 
     const handleSubmit = (e) => {
