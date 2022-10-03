@@ -26,19 +26,19 @@ const InputField = ({ input, workoutChange, durationChange, dateChange, clearFor
             <div className="field">
                 <label className='label-text-input'>WORKOUT</label>
                 <input className="input-box-new" type="text" placeholder="Workout" onChange={workoutChange} value={input.workout} />
-                {error && <p>Required</p>}
+                {error && <p className="error-text">Required*</p>}
             </div>
 
             <div className="field">
                 <label className='label-text-input'>DURATION</label>
                 <input className="input-box-new" type="text" placeholder="Duration" onChange={durationChange} value={input.duration} />
-                {error && <p>Required</p>}
+                {error && <p className="error-text" >Required*</p>}
             </div>
 
             <div className="field">
                 <label className='label-text-input'>DATE</label>
                 <input className="input-box-new" type="date" placeholder="Date" onChange={dateChange} value={input.to_char} />
-                {error && <p>Required</p>}
+                {error && <p className="error-text" >Required*</p>}
             </div>
             <button className="input-add-btn" onClick={inputValid}>Add</button>
         </>

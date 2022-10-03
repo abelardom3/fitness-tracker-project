@@ -23,7 +23,11 @@ const SingleLogs = ({ log, updateLogs }) => {
     if (!open) {
         return (
             <div id={log.fit_id} className="log-box">
-                <p className="log-text">Workout: {log.workout}, Duration: {log.duration} on {log.to_char}</p>
+                <p className="log-text">
+                    <span className="log-text-display">Workout: </span>{log.workout},
+                    <span className="log-text-display"> Duration: </span>{log.duration}
+                    <span className="log-text-display"> on </span>{log.to_char}
+                </p>
                 <div className="log-btn">
                     <button className='edit-btn' onClick={() => { handleEdit(log.fit_id) }}><ion-icon name="create"></ion-icon></button>
                     <button className="delete-btn" onClick={() => { handleDelete(log.fit_id) }}><ion-icon name="trash"></ion-icon></button>

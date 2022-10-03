@@ -4,12 +4,16 @@ import SingleLogs from './singleLogs'
 const Logs = ({ logs, updateLogs }) => {
 
     return (
-        <div className="log-container">
+        <div>
             <h1 className="log-header">View logs</h1>
-            {logs.map((log) => (
-                <SingleLogs log={log} key={log.fit_id} updateLogs={updateLogs} />
-            ))}
+            <div className="log-container">
+
+                {logs.map((log) => (
+                    <SingleLogs log={log} key={log.fit_id} updateLogs={updateLogs} />
+                ))}
+            </div>
         </div>
+
     )
 }
 

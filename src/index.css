@@ -4,33 +4,43 @@
     box-sizing: border-box;
 }
 
-body {
-    /* background-image: url('https://cyclingmagazine.ca/wp-content/uploads/2021/08/GettyImages-1213615970.jpg');
-    background-repeat: no-repeat;
-    background-size: cover; */
-}
+
 
 #root {
     font-family: 'Roboto', sans-serif;
-
-    /* color: #ffff; */
 }
 
 .header {
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
     background-color: #303036;
     width: auto;
     height: 5rem;
-    margin-bottom: 14rem;
+
+    margin-bottom: 11rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url('https://wallpapercave.com/wp/wp2639566.jpg');
+    /* below is ring wallpaper */
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url('https://cdn.wallpaper.com/main/2017/08/bxr-boxinggym-hd-4.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 75vh;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .header-text {
-    margin: auto;
+    width: 20rem;
+    margin-left: 2rem;
+    font-size: 25px;
+    padding: 5px;
     font-family: 'Nunito', sans-serif;
     font-weight: 1rem;
     color: #ffd60a;
+}
 
+.header-text:hover {
+    cursor: pointer;
 }
 
 .f-text {
@@ -41,14 +51,38 @@ body {
     font-size: larger;
 }
 
+.info-box {
+    color: #ffd60a;
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    margin: auto;
+    margin-top: 15rem;
+}
 
+.info-header {
+    width: 20rem;
+    margin: auto;
+    height: 5rem;
+    text-align: center;
+    font-size: 70px;
+}
 
+.info-ptag {
+    width: 29rem;
+    margin: auto;
+    margin-top: 3rem;
+    text-align: center;
 
+}
 
 
 .main-page {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 5rem;
+
+
 }
 
 
@@ -68,6 +102,7 @@ body {
     color: #ffd60a;
     background: #303036;
     padding-left: inherit;
+
 }
 
 .input-add-btn {
@@ -76,6 +111,7 @@ body {
     background: #303036;
     color: #ffd60a;
     margin: auto;
+
     text-align: center;
     padding: 5px;
     transition: .2s ease-out
@@ -83,6 +119,8 @@ body {
 
 .input-add-btn:hover {
     cursor: pointer;
+    background: #ffd60a;
+    color: #303036;
     width: 5.1rem;
     height: 2.1rem;
 
@@ -132,9 +170,10 @@ body {
 .log-container {
     display: flex;
     flex-direction: column;
-    width: 57rem;
+    width: 56rem;
     height: 30rem;
-    overflow: auto
+    overflow: auto;
+    border-bottom: 1px solid;
 }
 
 .log-header {
@@ -142,16 +181,23 @@ body {
     text-align: center;
     background: #303036;
     color: #ffd60a;
+
 }
 
 .log-box {
     display: flex;
     margin: 7px;
     color: #ffd60a;
-    width: 55rem;
+    width: 54rem;
     padding-left: 10px;
     justify-content: space-between;
 }
+
+.log-text-display {
+    color: #303036;
+
+}
+
 
 .log-btn {
     width: 10rem;
@@ -170,6 +216,8 @@ body {
     margin: 5px;
     background: #303036;
     color: #ffd60a;
+    transition: .2s ease-out;
+
 }
 
 .delete-btn {
@@ -177,17 +225,23 @@ body {
     margin: 5px;
     background: #303036;
     color: #ffd60a;
+    transition: .2s ease-out;
+
 }
 
 .edit-btn:hover {
     cursor: pointer;
-    margin: 4px;
+
+    background: #ffd60a;
+    color: #303036;
 }
 
 .delete-btn:hover {
     cursor: pointer;
-    margin: 4px;
+
     color: #ae2012;
+    background: #ffd60a;
+
 }
 
 
@@ -212,7 +266,7 @@ body {
     background:
         linear-gradient(90deg, #303036, #303036) left bottom/100% 2px no-repeat;
     border-bottom-color: #303036;
-    width: 145px;
+    width: 135px;
     outline: none;
     font-size: 15px;
     font-family: 'Quicksand', sans-serif;
@@ -229,9 +283,9 @@ body {
 .update-btn {
     margin-left: 15px;
     width: 2rem;
-
     background: #303036;
     color: #ffd60a;
+    transition: .3s ease-out;
 }
 
 .close-edit-btn {
@@ -239,37 +293,50 @@ body {
     width: 2rem;
     background: #303036;
     color: #ffd60a;
-
+    transition: .3s ease-out;
 }
 
 .update-btn:hover {
     cursor: pointer;
-
+    background: #ffd60a;
+    color: #303036;
 
 }
 
 .close-edit-btn:hover {
-    cursor: pointer
-}
-
-
-
-
-
-::-webkit-scrollbar {
-    width: 12px;
-
-}
-
-::-webkit-scrollbar-thumb {
+    cursor: pointer;
     background: #ffd60a;
-    border-radius: 100vw;
-    border: 2px solid #303036;
+    color: #303036;
 }
 
-::-webkit-scrollbar-track {
+
+.error-text {
+    color: #ae2012;
+}
+
+.edit-error {
+    color: #ae2012;
+    width: 7rem;
+    margin-left: 1.5rem;
+}
+
+
+.log-container::-webkit-scrollbar {
+    width: 8px;
+
+}
+
+
+.log-container::-webkit-scrollbar-thumb {
+    /* background: #ffd60a;
     border-radius: 100vw;
-    background: #303036;
+    border: 1px solid #303036; */
+}
+
+
+.log-container::-webkit-scrollbar-track {
+    /* border-radius: 100vw;
+    background: #303036; */
 
 
 }

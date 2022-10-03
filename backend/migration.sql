@@ -13,7 +13,7 @@ CREATE TABLE fitness_tracker(
 );
 
 
-INSERT INTO fitness_tracker(workout, duration, date) VALUES('arms', '1 hour', 'sep-30-2022');
+INSERT INTO fitness_tracker(workout, duration, date) VALUES('Arms', '1 hour', 'oct-03-2022');
 
 
 
