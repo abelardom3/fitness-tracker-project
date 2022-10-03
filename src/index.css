@@ -76,6 +76,16 @@ body {
     background: #303036;
     color: #ffd60a;
     margin: auto;
+    text-align: center;
+    padding: 5px;
+    transition: .2s ease-out
+}
+
+.input-add-btn:hover {
+    cursor: pointer;
+    width: 5.1rem;
+    height: 2.1rem;
+
 }
 
 
@@ -136,7 +146,7 @@ body {
 
 .log-box {
     display: flex;
-    margin: 5px;
+    margin: 7px;
     color: #ffd60a;
     width: 55rem;
     padding-left: 10px;
@@ -169,11 +179,23 @@ body {
     color: #ffd60a;
 }
 
+.edit-btn:hover {
+    cursor: pointer;
+    margin: 4px;
+}
+
+.delete-btn:hover {
+    cursor: pointer;
+    margin: 4px;
+    color: #ae2012;
+}
+
+
 
 .popup-box {
-    margin: 5px;
+    margin: 7px;
     color: #ffd60a;
-    padding-left: 10px
+
 }
 
 .popup-form {
@@ -190,16 +212,24 @@ body {
     background:
         linear-gradient(90deg, #303036, #303036) left bottom/100% 2px no-repeat;
     border-bottom-color: #303036;
-    width: 175px;
+    width: 145px;
     outline: none;
     font-size: 15px;
     font-family: 'Quicksand', sans-serif;
     padding: 1px;
 }
 
+.pop-btn {
+    width: 8.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
 .update-btn {
     margin-left: 15px;
     width: 2rem;
+
     background: #303036;
     color: #ffd60a;
 }
@@ -211,6 +241,20 @@ body {
     color: #ffd60a;
 
 }
+
+.update-btn:hover {
+    cursor: pointer;
+
+
+}
+
+.close-edit-btn:hover {
+    cursor: pointer
+}
+
+
+
+
 
 ::-webkit-scrollbar {
     width: 12px;
