@@ -34,7 +34,6 @@ const SingleLogs = ({ log, updateLogs }) => {
                 </div>
             </div>
         )
-
     } else {
         return < EditPopup close={closePopup} log={log} updateLogs={updateLogs} />
     }

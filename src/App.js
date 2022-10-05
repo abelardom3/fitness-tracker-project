@@ -45,7 +45,6 @@ function App() {
 
   const updateLogs = () => {
     setCount(count + 1)
-
   }
 
   return (
