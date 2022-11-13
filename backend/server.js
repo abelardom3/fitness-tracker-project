@@ -34,10 +34,10 @@ app.get('/api/logs/:id', async (req, res) => {
 
 
 app.post('/api/logs', async (req, res) => {
-    const { workout, duration, to_char } = req.body
+    const { workout, duration, date } = req.body
 
     try {
-        await pool.query('INSERT INTO fitness_tracker(workout,duration,date)VALUES($1,$2,$3)', [workout, duration, to_char])
+        await pool.query('INSERT INTO fitness_tracker(workout,duration,date)VALUES($1,$2,$3)', [workout, duration, date])
         res.send('it got add')
     } catch (error) {
         res.send(error.message)

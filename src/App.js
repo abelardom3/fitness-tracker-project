@@ -1,19 +1,15 @@
-
 import Header from './components/header';
-import InputForm from './components/input components/inputForm'
+import InputForm from './components/InputLogs/inputForm'
 import Logs from './components/logs';
-import React, { useState, useEffect } from 'react'
-const axios = require('axios')
+import React, { useEffect, useContext } from 'react'
+import axios from 'axios';
+import InputContext from './Context/InputContext'
 
 function App() {
 
-  const [logs, setLogs] = useState([])
-  const [count, setCount] = useState(0)
-  const [input, setInput] = useState({
-    workout: '',
-    duration: '',
-    to_char: ''
-  })
+  const { logs, updateLogs, setLogs, count } = useContext(InputContext)
+
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,38 +18,17 @@ function App() {
       setLogs(response.data)
     }
     fetchData()
-
   }, [count])
 
 
-  const workoutChange = (e) => {
-    setInput({ ...input, workout: e.target.value })
-  }
 
-  const durationChange = (e) => {
-    setInput({ ...input, duration: e.target.value })
-  }
-
-  const dateChange = (e) => {
-    setInput({ ...input, to_char: e.target.value })
-  }
-
-  const clearForm = () => {
-    setInput({ ...input, workout: '', duration: '', to_char: '' })
-    updateLogs()
-  }
-
-  const updateLogs = () => {
-    setCount(count + 1)
-  }
 
   return (
     <div className='container'>
       <Header />
       <div className='main-page'>
-        <InputForm input={input} workoutChange={workoutChange} durationChange={durationChange} dateChange={dateChange} clearForm={clearForm} />
+        <InputForm />
         <Logs logs={logs} updateLogs={updateLogs} />
-
       </div>
 
     </div>

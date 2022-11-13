@@ -135,7 +135,7 @@
 
 }
 
-.input-box-new {
+#input-box-new {
     border: none;
     color: #303036;
     border-radius: 0;
@@ -320,6 +320,10 @@
     margin-left: 1.5rem;
 }
 
+input.input-error,
+select.input-error {
+    border-color: red;
+}
 
 .log-container::-webkit-scrollbar {
     width: 8px;
