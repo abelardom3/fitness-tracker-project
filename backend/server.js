@@ -2,12 +2,14 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const pool = require('./conn')
+const authRoute = require('./auth')
 
 const port = 8000
 
 
 app.use(cors())
 app.use(express.json())
+app.use('/auth', authRoute)
 
 
 app.get('/api/logs', async (req, res) => {
