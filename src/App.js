@@ -1,13 +1,13 @@
-import Header from './components/header';
-import InputForm from './components/InputLogs/inputForm'
-import Logs from './components/logs';
+import HomePage from './components/HomePage';
 import React, { useEffect, useContext } from 'react'
 import axios from 'axios';
 import InputContext from './Context/InputContext'
+import { Routes, Route } from 'react-router-dom'
+import Register from './components/Register/ResgisterForm';
 
 function App() {
 
-  const { logs, updateLogs, setLogs, count } = useContext(InputContext)
+  const { setLogs, count } = useContext(InputContext)
 
 
 
@@ -24,14 +24,10 @@ function App() {
 
 
   return (
-    <div className='container'>
-      <Header />
-      <div className='main-page'>
-        <InputForm />
-        <Logs logs={logs} updateLogs={updateLogs} />
-      </div>
-
-    </div>
+    <Routes>
+      <Route path='/' element={<HomePage />} />
+      <Route path='/register' element={<Register />} />
+    </Routes>
   );
 }
 
