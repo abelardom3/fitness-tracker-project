@@ -80,8 +80,8 @@
 .main-page {
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 5rem;
-
+    margin-bottom: 10rem;
+    flex-direction: column;
 
 }
 
@@ -343,4 +343,31 @@ select.input-error {
     background: #303036; */
 
 
+}
+
+.lti-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0rem auto;
+    width: 50rem;
+    justify-content: space-between;
+}
+
+.lti-box {
+    width: 15rem;
+    height: 15rem;
+}
+
+.lti-img {
+    width: 8rem;
+    height: 8rem;
+    margin-left: 3.5rem;
+    margin-bottom: 2rem;
+    border-radius: 90%;
+}
+
+.lti-header {
+    width: 8rem;
+    margin: 0rem auto;
+    text-align: center;
 }

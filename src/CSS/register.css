@@ -5,4 +5,65 @@ select.input-error {
 
 .error-p {
     color: brown;
+    width: 20rem;
+    margin: 0rem auto;
+}
+
+.register-container {
+    width: 45rem;
+    height: 30rem;
+    margin: 10rem auto;
+}
+
+.header-reg {
+    width: 10rem;
+    height: 5rem;
+    margin: 0rem auto;
+}
+
+.form-container {
+    width: 40rem;
+    display: flex;
+    height: 20rem;
+    flex-direction: column;
+    margin: 0rem auto;
+    justify-content: space-around;
+}
+
+#input-reg {
+    width: 20rem;
+    margin: 0.5rem auto;
+    height: 2rem;
+    font-size: 18px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    height: 10rem;
+}
+
+.label-h1 {
+    width: 5rem;
+    margin-left: 10rem;
+}
+
+.btn-reg {
+    width: 20rem;
+    height: 3rem;
+    margin: 0.5rem auto;
+    font-weight: 700;
+    font-size: 20px;
+    background: #303036;
+    color: #ffd60a;
+    text-align: center;
+    padding: 5px;
+    transition: .2s ease-out;
+}
+
+.btn-reg:hover {
+    cursor: pointer;
+    background: #ffd60a;
+    color: #303036;
 }

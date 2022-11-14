@@ -4,6 +4,7 @@ import axios from 'axios';
 import InputContext from './Context/InputContext'
 import { Routes, Route } from 'react-router-dom'
 import Register from './components/Register/ResgisterForm';
+import LoginForm from './components/login/login';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
     <Routes>
       <Route path='/' element={<HomePage />} />
       <Route path='/register' element={<Register />} />
+      <Route path='/login' element={<LoginForm />} />
     </Routes>
   );
 }
