@@ -21,4 +21,9 @@ auth.post('/register', async (req, res) => {
 })
 
 
+auth.post('/login', async (req, res) => {
+    res.send('hit login route')
+})
+
+
 module.exports = auth
