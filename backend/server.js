@@ -3,8 +3,9 @@ const app = express()
 const cors = require('cors')
 const pool = require('./conn')
 const authRoute = require('./auth')
+require('dotenv').config()
 
-const port = 8000
+const port = process.env.PORT || 8000
 
 
 app.use(cors())

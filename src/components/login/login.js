@@ -1,16 +1,28 @@
 import { useState } from "react"
+import axios from "axios"
 
+const LoginForm = ({ test }) => {
 
-const LoginForm = () => {
+    const [err, setErr] = useState({})
 
     const [values, setValues] = useState({
         email: '',
         password: ''
     })
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log(values)
+        const result = await axios.post('http://localhost:8000/auth/login', values)
+        if (result.data.errors) {
+            setErr(result.data.errors)
+        } else if (result.data.msg) {
+            setErr(result.data)
+        } else {
+            setErr({})
+            setValues({ ...values, email: '', password: '' })
+            test()
+            localStorage.setItem("accessToken", result.data.accessToken)
+        }
     }
 
     const handleChange = (e) => {
@@ -29,17 +41,17 @@ const LoginForm = () => {
                     <div className="input-box">
                         <label className="label-log">Email</label>
                         <input type='text' onChange={handleChange} value={values.email} name='email' className="input-login" />
-                        <p>error</p>
+                        {err.email && <p className="error-log">{err.email}</p>}
                     </div>
                     <div className="input-box">
                         <label className="label-log">Password</label>
-                        <input type='password' onChange={handleChange} values={values.password} name='password' className="input-login" />
-                        <p>error</p>
+                        <input type='password' onChange={handleChange} value={values.password} name='password' className="input-login" />
+                        {(err.password || err.msg) && <p className="error-log">{err.password || err.msg}</p>}
                     </div>
 
                     <button type="submit" className="btn-loginPage">Log in </button>
                 </form>
-            </div>
+            </div >
         </>
     )
 }

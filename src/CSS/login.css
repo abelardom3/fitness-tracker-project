@@ -74,3 +74,9 @@
     background: #ffd60a;
     color: #303036;
 }
+
+.error-log {
+    color: brown;
+    width: 20rem;
+    margin: 0rem auto;
+}

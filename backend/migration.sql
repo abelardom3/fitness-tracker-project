@@ -1,5 +1,5 @@
-DROP DATABASE IF EXISTS fitness_app ;
-CREATE DATABASE fitness_app ;
+-- DROP DATABASE IF EXISTS fitness_app ;
+-- CREATE DATABASE fitness_app ;
 
 
 DROP TABLE IF EXISTS fitness_tracker CASCADE;
