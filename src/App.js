@@ -9,24 +9,11 @@ import UserHome from './components/UserPage/UserHome';
 
 function App() {
 
-  const { setLogs, count } = useContext(InputContext)
   const [auth, setAuth] = useState(false)
-
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get('http://localhost:8000/api/logs')
-      console.log(response.data)
-      setLogs(response.data)
-    }
-    fetchData()
-  }, [count])
 
   const test = () => {
     setAuth(true)
   }
-
-
 
   return (
     <Routes>

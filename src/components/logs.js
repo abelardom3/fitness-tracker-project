@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import SingleLogs from './singleLogs'
+import InputContext from "../Context/InputContext";
 
-const Logs = ({ logs, updateLogs }) => {
+
+const Logs = () => {
+
+    const { logs } = useContext(InputContext)
 
     return (
         <div>
             <h1 className="log-header">View logs</h1>
             <div className="log-container">
-
                 {logs.map((log) => (
-                    <SingleLogs log={log} key={log.fit_id} updateLogs={updateLogs} />
+                    <SingleLogs log={log} key={log.fit_id} />
                 ))}
             </div>
         </div>

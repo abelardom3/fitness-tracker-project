@@ -1,7 +1,24 @@
+import Logs from "../logs"
+import InputForm from "../InputLogs/inputForm"
 
 
 const UserHome = () => {
-    return <h1>hello user</h1>
+
+    let newDate = new Date().toDateString()
+
+    return (
+        <>
+            <div className="name-date-header">
+                <h1 className="user-name">Welcome dude</h1>
+                <h2 className="date-text">{newDate}</h2>
+            </div>
+            <div className="user-page">
+                <InputForm />
+                <Logs />
+            </div>
+        </>
+
+    )
 }
 
 export default UserHome

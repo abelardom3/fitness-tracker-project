@@ -1,9 +1,12 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import axios from "axios";
+import InputContext from "../Context/InputContext";
 
-const EditPopup = ({ close, log, updateLogs }) => {
 
+const EditPopup = ({ close, log }) => {
+
+    const { updateLogs } = useContext(InputContext)
     const [newInput, setNewInput] = useState(log)
     const [error, setError] = useState(false)
 

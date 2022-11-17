@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './CSS/index.css';
 import './CSS/register.css'
 import './CSS/login.css'
+import './CSS/userPage.css'
+import './CSS/portals.css'
 import App from './App';
 
 
