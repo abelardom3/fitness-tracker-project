@@ -33,10 +33,23 @@
     width: 20rem;
     margin-left: 2rem;
     font-size: 25px;
-    padding: 5px;
+    padding: 10px;
     font-family: 'Nunito', sans-serif;
     font-weight: 1rem;
     color: #ffd60a;
+    margin-top: 0.5rem;
+}
+
+.login-header {
+    color: #ffd60a;
+    padding: 10px;
+    margin-top: 0.5rem;
+    margin-right: 2rem;
+    transition: padding .1s ease-out;
+}
+
+.login-header:hover {
+    padding-top: 8px;
 }
 
 .header-text:hover {
@@ -45,6 +58,7 @@
 
 .f-text {
     font-size: larger;
+
 }
 
 .t-text {
@@ -110,11 +124,11 @@
     height: 2rem;
     background: #303036;
     color: #ffd60a;
-    margin: auto;
-
     text-align: center;
+    margin-top: 1rem;
     padding: 5px;
-    transition: .2s ease-out
+    transition: .2s ease-out;
+    margin-left: 4rem;
 }
 
 .input-add-btn:hover {
@@ -191,6 +205,12 @@
     width: 54rem;
     padding-left: 10px;
     justify-content: space-between;
+    transition: .1s ease;
+}
+
+.log-box:hover {
+    cursor: pointer;
+    border-bottom: 1px solid black;
 }
 
 .log-text-display {
@@ -210,6 +230,7 @@
     margin: 5px;
     color: #303036;
 }
+
 
 .edit-btn {
     width: 4rem;
@@ -247,15 +268,19 @@
 
 
 .popup-box {
-    margin: 7px;
+    width: 30rem;
     color: #ffd60a;
-
+    margin: auto;
+    height: 20rem;
 }
 
 .popup-form {
-    margin: 5px;
+    margin: auto;
     color: #303036;
     display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: 15rem;
     justify-content: space-evenly;
 }
 
@@ -263,12 +288,11 @@
     border: none;
     color: #303036;
     border-radius: 0;
-    background:
-        linear-gradient(90deg, #303036, #303036) left bottom/100% 2px no-repeat;
+    background: linear-gradient(90deg, #303036, #303036) left bottom/100% 2px no-repeat;
     border-bottom-color: #303036;
-    width: 135px;
+    width: fit-content;
     outline: none;
-    font-size: 15px;
+    font-size: 18px;
     font-family: 'Quicksand', sans-serif;
     padding: 1px;
 }

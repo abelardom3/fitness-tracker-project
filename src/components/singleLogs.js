@@ -4,7 +4,7 @@ import EditPopup from "./editPopup";
 import { useState } from "react";
 import InputContext from "../Context/InputContext";
 import EditPortal from "./Portals/editPortal";
-import DeletePortal from "./Portals/deletePortal";
+
 
 
 
@@ -13,18 +13,6 @@ const SingleLogs = ({ log }) => {
     const { updateLogs } = useContext(InputContext)
     const [open, setOpen] = useState(false)
 
-    // const handleDelete = async (id) => {
-    //     await axios.delete(`http://localhost:8000/api/logs/${id}`)
-    //     updateLogs()
-    // }
-
-    // const handleEdit = (id) => {
-    //     setOpen(true)
-    // }
-
-    // const closePopup = () => {
-    //     setOpen(false)
-    // }
 
 
     return (
@@ -35,22 +23,15 @@ const SingleLogs = ({ log }) => {
                     <span className="log-text-display"> Duration: </span>{log.duration}
                     <span className="log-text-display"> on </span>{log.to_char}
                 </p>
-                <div className="log-btn">
-                    {/* <button className='edit-btn' onClick={() => { handleEdit(log.fit_id) }}><ion-icon name="create"></ion-icon></button>
-                <button className="delete-btn" onClick={() => { handleDelete(log.fit_id) }}><ion-icon name="trash"></ion-icon></button> */}
-
+                {/* <div className="log-btn">
                     <button className='edit-btn' ><ion-icon name="create"></ion-icon></button>
                     <button className="delete-btn" ><ion-icon name="trash"></ion-icon></button>
-                    {/* <DeletePortal close={() => setOpen(false)} open={open} log={log} /> */}
 
-
-                </div>
+                </div> */}
             </div>
             <EditPortal close={() => setOpen(false)} open={open} log={log} />
         </>
     )
-
-    // return < EditPopup close={closePopup} log={log} />
 
 
 }

@@ -30,7 +30,7 @@ const InputForm = () => {
         <>
             <form className="input-form" onSubmit={handleSubmit} >
                 <h1 className="input-new-text">New Workout</h1>
-                <div className="input-box">
+                <div className="input-box-cont">
                     <div className="field">
                         <label className='label-text-input'>WORKOUT</label>
                         <input id="input-box-new"

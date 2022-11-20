@@ -1,3 +1,22 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url('https://c.wallhere.com/photos/e9/b9/working_out_exercise_barbell_gyms-138822.jpg!d');
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 .login-container {
     width: 15rem;
     height: 5rem;
@@ -24,7 +43,7 @@
 
 
 .form-box {
-    width: 40rem;
+    width: 35rem;
     display: flex;
     height: 20rem;
     flex-direction: column;
@@ -33,15 +52,21 @@
 }
 
 .loginPage-container {
-    width: 45rem;
+    width: 35rem;
     height: 30rem;
     margin: 10rem auto;
+    background-color: white;
+
 }
 
 .loginPage-text {
-    width: 10rem;
-    height: 5rem;
+    width: 35rem;
+    height: 4rem;
     margin: 0rem auto;
+    text-align: center;
+    padding-top: 1rem;
+    background: #303036;
+    color: #ffd60a;
 }
 
 .input-login {
@@ -53,7 +78,7 @@
 
 .label-log {
     width: 5rem;
-    margin-left: 10rem;
+    margin-left: 7.6rem;
 }
 
 .btn-loginPage {
@@ -79,4 +104,14 @@
     color: brown;
     width: 20rem;
     margin: 0rem auto;
+}
+
+.signUp-link {
+    margin: auto;
+    margin-top: 1rem;
+    color: #303036;
+}
+
+.signUp-link:hover {
+    text-decoration-color: #ffd60a;
 }

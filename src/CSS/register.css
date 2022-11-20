@@ -40,8 +40,9 @@ select.input-error {
 .input-box {
     display: flex;
     flex-direction: column;
-    width: 40rem;
+    width: 35rem;
     height: 10rem;
+    padding-top: 1rem;
 }
 
 .label-h1 {

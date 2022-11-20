@@ -1,3 +1,7 @@
+#portal {
+    font-family: 'Roboto', sans-serif;
+}
+
 .over-lay {
     position: fixed;
     top: 0;
@@ -13,10 +17,88 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 45rem;
-    height: 25rem;
+    width: 30rem;
+    height: 26rem;
     transform: translate(-50%, -80%);
     background-Color: #FFF;
-    padding: 1rem;
+    /* padding: 1rem; */
     z-index: 1000;
+}
+
+
+.pop-header {
+    margin-bottom: 10px;
+    color: #ffd60a;
+    background: #303036;
+    height: 3.5rem;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+.close-pop {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    color: red;
+    border: none;
+    font-size: 35px;
+}
+
+.close-pop:hover {
+    cursor: pointer;
+}
+
+.input-cont {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3rem;
+}
+
+.label-pop {
+    font-size: 20px;
+}
+
+.pop-btn-box {
+    width: 14rem;
+    margin-left: 8rem;
+    margin-top: 1rem;
+    display: flex;
+    height: 5rem;
+    justify-content: space-around;
+}
+
+.save-btn {
+    width: 5rem;
+    height: 2rem;
+    background: #303036;
+    color: #ffd60a;
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+    transition: .2s ease-out;
+}
+
+
+.save-btn:hover,
+.pop-delete-btn:hover {
+    cursor: pointer;
+    background: #ffd60a;
+    color: #303036;
+}
+
+
+.pop-delete-btn {
+    width: 5rem;
+    height: 2rem;
+    background: #303036;
+    color: #ffd60a;
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+    transition: .2s ease-out;
 }

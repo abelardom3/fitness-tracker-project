@@ -34,7 +34,7 @@ const HomePage = () => {
 
                 <div className="login-container">
                     <Link to='/login'>
-                        <button className="login-btn">Login</button>
+                        <button className="login-btn">Get started</button>
                     </Link>
                 </div>
 

@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom"
-
+import EditPopup from "../editPopup";
 
 const EditPortal = ({ close, open, log }) => {
 
@@ -9,8 +9,10 @@ const EditPortal = ({ close, open, log }) => {
         <>
             <div className="over-lay">
                 <div className="module-box">
-                    <h1>hello edit page: {log.fit_id}</h1>
-                    <button onClick={() => close()}>close</button>
+                    <button className='close-pop' onClick={() => close()}><ion-icon name="close-outline"></ion-icon></button>
+                    <div className="pop-header"><h1 style={{ padding: '5px' }}>Edit</h1></div>
+                    <EditPopup log={log} close={close} />
+
                 </div>
             </div>
         </>, document.getElementById('portal')
