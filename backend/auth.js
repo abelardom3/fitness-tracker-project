@@ -41,12 +41,12 @@ auth.post('/login', validLogin, async (req, res) => {
 
             const user = rows[0]
             const isAuth = await bcrypt.compare(password, user.password)
-
+            console.log(user)
             if (!isAuth) {
                 return res.send({ msg: 'Incorrect Password' })
             } else {
 
-                const accessToken = jwt.sign({ userId: user.user_id }, process.env.ACCESS_TOKEN_SECRET)
+                const accessToken = jwt.sign({ userId: user.user_id, userName: user.name }, process.env.ACCESS_TOKEN_SECRET)
                 return res.send({ accessToken: accessToken })
             }
 

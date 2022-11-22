@@ -10,21 +10,26 @@ select.input-error {
 }
 
 .register-container {
-    width: 45rem;
+    width: 35rem;
     height: 30rem;
+    background: white;
     margin: 10rem auto;
 }
 
 .header-reg {
-    width: 10rem;
-    height: 5rem;
+    width: 35rem;
+    height: 4rem;
     margin: 0rem auto;
+    text-align: center;
+    padding-top: 1rem;
+    background: #303036;
+    color: #ffd60a;
 }
 
 .form-container {
-    width: 40rem;
+    width: 35rem;
     display: flex;
-    height: 20rem;
+    height: 23rem;
     flex-direction: column;
     margin: 0rem auto;
     justify-content: space-around;
@@ -45,9 +50,21 @@ select.input-error {
     padding-top: 1rem;
 }
 
+.input-box2 {
+    display: flex;
+    flex-direction: column;
+    width: 35rem;
+    height: 10rem;
+    margin-top: 1rem;
+}
+
+
+
+
+
 .label-h1 {
     width: 5rem;
-    margin-left: 10rem;
+    margin-left: 7.5rem;
 }
 
 .btn-reg {

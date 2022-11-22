@@ -23,51 +23,59 @@ const Register = () => {
 
 
     return (
-        <div className="register-container">
-            <h1 className="header-reg">Register</h1>
-            <form onSubmit={handleSubmit} className='form-container'>
-                <div className="input-box">
-                    <label className="label-h1">Name</label>
-                    <input type='text'
-                        id="input-reg"
-                        placeholder="Name"
-                        name="name"
-                        onBlur={handleBlur}
-                        onChange={handleChange}
-                        value={values.name}
-                        className={errors.name && touched.name ? 'input-error' : ''}
-                    />
-                    {errors.name && touched.name && <p className="error-p">{errors.name}</p>}
+
+        <div className="container2">
+            <div style={{ paddingTop: '10rem' }}>
+                <div className="register-container">
+                    <h1 className="header-reg">Register</h1>
+                    <form onSubmit={handleSubmit} className='form-container'>
+                        <div className="input-box2">
+                            <label className="label-h1">Name</label>
+                            <input type='text'
+                                id="input-reg"
+                                placeholder="Name"
+                                name="name"
+                                onBlur={handleBlur}
+                                onChange={handleChange}
+                                value={values.name}
+                                className={errors.name && touched.name ? 'input-error' : ''}
+                            />
+                            {errors.name && touched.name && <p className="error-p">{errors.name}</p>}
+                        </div>
+                        <div className="input-box2">
+                            <label className="label-h1">Email</label>
+                            <input type='text'
+                                id="input-reg"
+                                placeholder="Email"
+                                name='email'
+                                onBlur={handleBlur}
+                                onChange={handleChange}
+                                values={values.email}
+                                className={errors.email && touched.email ? 'input-error' : ''}
+                            />
+                            {errors.email && touched.email && <p className="error-p">{errors.email}</p>}
+                        </div>
+                        <div className="input-box2">
+                            <label className="label-h1">Password</label>
+                            <input type='password'
+                                id="input-reg"
+                                placeholder='Password'
+                                name='password'
+                                onBlur={handleBlur}
+                                onChange={handleChange}
+                                value={values.password}
+                                className={errors.password && touched.password ? 'input-error' : ''}
+                            />
+                            {errors.password && touched.password && <p className="error-p">{errors.password}</p>}
+                        </div>
+                        <button type="submit" className="btn-reg">submit</button>
+                    </form>
                 </div>
-                <div className="input-box">
-                    <label className="label-h1">Email</label>
-                    <input type='text'
-                        id="input-reg"
-                        placeholder="Email"
-                        name='email'
-                        onBlur={handleBlur}
-                        onChange={handleChange}
-                        values={values.email}
-                        className={errors.email && touched.email ? 'input-error' : ''}
-                    />
-                    {errors.email && touched.email && <p className="error-p">{errors.email}</p>}
-                </div>
-                <div className="input-box">
-                    <label className="label-h1">Password</label>
-                    <input type='password'
-                        id="input-reg"
-                        placeholder='Password'
-                        name='password'
-                        onBlur={handleBlur}
-                        onChange={handleChange}
-                        value={values.password}
-                        className={errors.password && touched.password ? 'input-error' : ''}
-                    />
-                    {errors.password && touched.password && <p className="error-p">{errors.password}</p>}
-                </div>
-                <button type="submit" className="btn-reg">submit</button>
-            </form>
+            </div>
         </div>
+
+
+
     )
 
 }

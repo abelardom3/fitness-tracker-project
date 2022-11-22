@@ -6,6 +6,12 @@ const UserHome = () => {
 
     let newDate = new Date().toDateString()
 
+    const userData = localStorage.getItem('accessToken')
+    const getPayLoad = userData.split(".")[1];
+    const payLoad = JSON.parse(atob(getPayLoad))
+
+    console.log(payLoad)
+
     return (
         <>
             <div className="name-date-header">

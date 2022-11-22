@@ -62,6 +62,7 @@ const EditPopup = ({ log, close }) => {
                     <button className="update-btn" onClick={() => { editData(log.fit_id) }}><ion-icon name="create"></ion-icon></button>
                     <button className="close-edit-btn" onClick={handleXClick}><ion-icon name="close"></ion-icon></button>
                 </div> */}
+
             </form>
 
             {error && <p className="edit-error">Need new edit*</p>}
