@@ -1,6 +1,7 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import axios from "axios"
 import { Link } from "react-router-dom"
+import InputContext from "../../Context/InputContext"
 
 const LoginForm = ({ test }) => {
 
@@ -10,6 +11,8 @@ const LoginForm = ({ test }) => {
         email: '',
         password: ''
     })
+
+    const { getUserInfo } = useContext(InputContext)
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -23,6 +26,8 @@ const LoginForm = ({ test }) => {
             setValues({ ...values, email: '', password: '' })
             test()
             localStorage.setItem("accessToken", result.data.accessToken)
+            localStorage.setItem('isAuth', true)
+            getUserInfo()
         }
     }
 

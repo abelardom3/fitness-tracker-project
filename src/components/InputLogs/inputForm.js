@@ -5,10 +5,11 @@ import { dataSchema } from "./dataSchema";
 import InputContext from '../../Context/InputContext'
 
 const InputForm = () => {
-    const { updateLogs } = useContext(InputContext)
+    const { updateLogs, userInfo } = useContext(InputContext)
 
     const onSubmit = async (values, actions) => {
-        const response = await axios.post('http://localhost:8000/api/logs', values)
+        const body = { ...values, userId: userInfo.userId }
+        const response = await axios.post('http://localhost:8000/api/logs', body)
         console.log(response.data)
         actions.resetForm()
         updateLogs()

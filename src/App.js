@@ -10,10 +10,14 @@ import UserHome from './components/UserPage/UserHome';
 function App() {
 
   const [auth, setAuth] = useState(false)
+  // const isItAuth = localStorage.getItem('isAuth')
+  // console.log(isItAuth)
+
 
   const test = () => {
     setAuth(true)
   }
+
 
   return (
     <Routes>

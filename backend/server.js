@@ -13,10 +13,11 @@ app.use(express.json())
 app.use('/auth', authRoute)
 
 
-app.get('/api/logs', async (req, res) => {
+app.get('/api/logs/:id', async (req, res) => {
+    const { id } = req.params
 
     try {
-        const { rows } = await pool.query("SELECT fit_id, workout, duration, TO_CHAR(date, 'Mon dd, yyyy') FROM fitness_tracker")
+        const { rows } = await pool.query("SELECT fit_id, workout, duration, TO_CHAR(date, 'Mon dd, yyyy') FROM fitness_tracker WHERE user_id=$1", [id])
         res.send(rows)
     } catch (error) {
         res.send(error.message)
@@ -24,7 +25,7 @@ app.get('/api/logs', async (req, res) => {
 })
 
 
-app.get('/api/logs/:id', async (req, res) => {
+app.get('/api/logs/testing', async (req, res) => {
     const { id } = req.params
     try {
         const { rows } = await pool.query('SELECT * FROM fitness_tracker WHERE fit_id =$1;', [id])
@@ -37,10 +38,9 @@ app.get('/api/logs/:id', async (req, res) => {
 
 
 app.post('/api/logs', async (req, res) => {
-    const { workout, duration, date } = req.body
-
+    const { workout, duration, date, userId } = req.body
     try {
-        await pool.query('INSERT INTO fitness_tracker(workout,duration,date)VALUES($1,$2,$3)', [workout, duration, date])
+        await pool.query('INSERT INTO fitness_tracker(workout,duration,date, user_id)VALUES($1,$2,$3,$4)', [workout, duration, date, userId])
         res.send('it got add')
     } catch (error) {
         res.send(error.message)
