@@ -9,6 +9,8 @@ export const InputProivder = ({ children }) => {
     const [logs, setLogs] = useState([])
     const [count, setCount] = useState(0)
     const [userInfo, setUserInfo] = useState({})
+    const [auth, setAuth] = useState(false)
+
 
     const getUserInfo = () => {
         const userData = localStorage.getItem('accessToken')
@@ -24,17 +26,15 @@ export const InputProivder = ({ children }) => {
     }
 
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         console.log('hit use effect')
-    //         console.log(userInfo)
-    //         const response = await axios.get('http://localhost:8000/api/logs')
-    //         console.log(response.data)
-    //         setLogs(response.data)
-    //     }
-    //     fetchData()
+    const logOut = () => {
+        setAuth(false)
+        localStorage.removeItem('isAuth')
+        localStorage.removeItem('accessToken')
+    }
 
-    // }, [count])
+    const handleLoggingIn = () => {
+        setAuth(true)
+    }
 
 
     const updateLogs = () => {
@@ -43,7 +43,7 @@ export const InputProivder = ({ children }) => {
 
 
     return (
-        <InputContext.Provider value={{ logs, updateLogs, setLogs, count, getUserInfo, userInfo }}>
+        <InputContext.Provider value={{ logs, updateLogs, setLogs, count, getUserInfo, userInfo, logOut, setUserInfo, auth, setAuth, handleLoggingIn }}>
             {children}
         </InputContext.Provider>
     )

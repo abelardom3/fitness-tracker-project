@@ -3,7 +3,7 @@ import axios from "axios"
 import { Link } from "react-router-dom"
 import InputContext from "../../Context/InputContext"
 
-const LoginForm = ({ test }) => {
+const LoginForm = () => {
 
     const [err, setErr] = useState({})
 
@@ -12,7 +12,7 @@ const LoginForm = ({ test }) => {
         password: ''
     })
 
-    const { getUserInfo } = useContext(InputContext)
+    const { getUserInfo, handleLoggingIn } = useContext(InputContext)
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -24,9 +24,9 @@ const LoginForm = ({ test }) => {
         } else {
             setErr({})
             setValues({ ...values, email: '', password: '' })
-            test()
             localStorage.setItem("accessToken", result.data.accessToken)
             localStorage.setItem('isAuth', true)
+            handleLoggingIn()
             getUserInfo()
         }
     }

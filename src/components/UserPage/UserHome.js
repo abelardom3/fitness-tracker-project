@@ -9,7 +9,7 @@ const UserHome = () => {
 
     let newDate = new Date().toDateString()
 
-    const { userInfo, setLogs, count } = useContext(InputContext)
+    const { userInfo, setLogs, count, logOut } = useContext(InputContext)
 
     useEffect(() => {
         const fetchData = async () => {
@@ -31,6 +31,7 @@ const UserHome = () => {
             <div className="name-date-header">
                 <h1 className="user-name">Welcome {userInfo.userName}</h1>
                 <h2 className="date-text">{newDate}</h2>
+                <button onClick={() => { logOut() }}>Log out mate</button>
             </div>
             <div className="user-page">
                 <InputForm />
