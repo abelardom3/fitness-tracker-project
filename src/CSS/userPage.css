@@ -30,3 +30,25 @@
     padding: 1rem;
     padding-right: 0rem;
 }
+
+.logout-btn {
+    width: 5rem;
+    background: #303036;
+    color: #ffd60a;
+    transition: .3s ease-out;
+    height: 2.5rem;
+    position: absolute;
+    right: 3rem;
+    top: 4rem;
+}
+
+.logout-btn:hover {
+    cursor: pointer;
+    background: #ffd60a;
+    color: #303036;
+}
+
+.noLogs-text {
+    margin: auto;
+    color: darkgrey;
+}

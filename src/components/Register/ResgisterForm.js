@@ -1,14 +1,27 @@
 import { useFormik } from "formik";
 import axios from "axios";
 import { registerSchema } from "./registerSchema";
+import InputContext from "../../Context/InputContext";
+import { useContext, useState } from "react";
 
 
 const Register = () => {
 
+    const { getUserInfo, handleLoggingIn } = useContext(InputContext)
+    const [err, setErr] = useState({})
+
     const onSubmit = async (values, actions) => {
-        const result = await axios.post('http://localhost:8000/auth/register', values)
-        console.log(result.data)
-        actions.resetForm()
+        try {
+            const result = await axios.post('http://localhost:8000/auth/register', values)
+            console.log(result.data)
+            localStorage.setItem("accessToken", result.data.accessToken)
+            localStorage.setItem('isAuth', true)
+            handleLoggingIn()
+            getUserInfo()
+            actions.resetForm()
+        } catch (error) {
+            setErr(error.response.data)
+        }
     }
 
     const { values, handleChange, handleSubmit, errors, touched, handleBlur } = useFormik({
@@ -53,7 +66,7 @@ const Register = () => {
                                 values={values.email}
                                 className={errors.email && touched.email ? 'input-error' : ''}
                             />
-                            {errors.email && touched.email && <p className="error-p">{errors.email}</p>}
+                            {((errors.email && touched.email) || err.msg) && <p className="error-p">{errors.email || err.msg}</p>}
                         </div>
                         <div className="input-box2">
                             <label className="label-h1">Password</label>

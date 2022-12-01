@@ -41,7 +41,7 @@
 }
 
 .login-header {
-    color: #ffd60a;
+    color: white;
     padding: 10px;
     margin-top: 0.5rem;
     margin-right: 2rem;
@@ -50,6 +50,7 @@
 
 .login-header:hover {
     padding-top: 8px;
+    color: #ffd60a;
 }
 
 .header-text:hover {

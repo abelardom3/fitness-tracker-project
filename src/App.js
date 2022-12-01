@@ -38,7 +38,7 @@ function App() {
   return (
     <Routes>
       <Route path='/' element={auth ? <UserHome /> : <HomePage />} />
-      <Route path='/register' element={<Register />} />
+      <Route path='/register' element={auth ? <UserHome /> : <Register />} />
       <Route path='/login' element={auth ? <Navigate to='/tracker' /> : <LoginForm />} />
       <Route path='/tracker' element={auth ? <UserHome /> : <LoginForm />} />
     </Routes>

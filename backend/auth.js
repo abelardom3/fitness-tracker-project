@@ -13,10 +13,14 @@ auth.post('/register', async (req, res) => {
     try {
         const { rows } = await pool.query('SELECT * FROM fit_accounts WHERE email = $1', [email])
         if (rows.length !== 0) {
-            res.send('alreayd exist')
+            res.status(404).send({ msg: 'Email Already Exist' })
         } else {
             const hashPassword = await bcrypt.hash(password, 10)
-            await pool.query('INSERT INTO fit_accounts(name, email, password) VALUES($1,$2,$3)', [name, email, hashPassword])
+            const { rows } = await pool.query('INSERT INTO fit_accounts(name, email, password) VALUES($1,$2,$3) RETURNING *', [name, email, hashPassword])
+            const user = rows[0]
+            const accessToken = jwt.sign({ userId: user.user_id, userName: user.name }, process.env.ACCESS_TOKEN_SECRET)
+            return res.send({ accessToken: accessToken })
+
         }
     } catch (error) {
         res.send(error.message)

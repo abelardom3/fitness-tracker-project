@@ -17,7 +17,7 @@ app.get('/api/logs/:id', async (req, res) => {
     const { id } = req.params
 
     try {
-        const { rows } = await pool.query("SELECT fit_id, workout, duration, TO_CHAR(date, 'Mon dd, yyyy') FROM fitness_tracker WHERE user_id=$1", [id])
+        const { rows } = await pool.query("SELECT fit_id, workout, duration, TO_CHAR(date, 'Mon dd, yyyy') FROM fitness_tracker WHERE user_id=$1 ORDER BY date DESC", [id])
         res.send(rows)
     } catch (error) {
         res.send(error.message)

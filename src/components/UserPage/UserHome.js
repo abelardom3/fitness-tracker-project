@@ -21,17 +21,12 @@ const UserHome = () => {
 
     }, [count])
 
-
-
-
-
-
     return (
         <>
             <div className="name-date-header">
                 <h1 className="user-name">Welcome {userInfo.userName}</h1>
                 <h2 className="date-text">{newDate}</h2>
-                <button onClick={() => { logOut() }}>Log out mate</button>
+                <button className="logout-btn" onClick={() => { logOut() }}>Log out</button>
             </div>
             <div className="user-page">
                 <InputForm />

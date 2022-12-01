@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 const InputContext = createContext()
@@ -10,6 +10,10 @@ export const InputProivder = ({ children }) => {
     const [count, setCount] = useState(0)
     const [userInfo, setUserInfo] = useState({})
     const [auth, setAuth] = useState(false)
+
+
+    const navigate = useNavigate()
+
 
 
     const getUserInfo = () => {
@@ -30,6 +34,7 @@ export const InputProivder = ({ children }) => {
         setAuth(false)
         localStorage.removeItem('isAuth')
         localStorage.removeItem('accessToken')
+        navigate('/')
     }
 
     const handleLoggingIn = () => {
