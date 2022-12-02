@@ -1,6 +1,5 @@
 import HomePage from './components/HomePage';
-import React, { useEffect, useContext, useState } from 'react'
-import axios from 'axios';
+import React, { useEffect, useContext } from 'react'
 import InputContext from './Context/InputContext'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Register from './components/Register/ResgisterForm';
@@ -29,7 +28,7 @@ function App() {
       const payLoad = JSON.parse(atob(getPayLoad))
       console.log('hit else')
       setUserInfo(payLoad)
-      // console.log(payLoad)
+
     }
   }, [])
 

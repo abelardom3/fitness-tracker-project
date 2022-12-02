@@ -45,7 +45,6 @@ auth.post('/login', validLogin, async (req, res) => {
 
             const user = rows[0]
             const isAuth = await bcrypt.compare(password, user.password)
-            console.log(user)
             if (!isAuth) {
                 return res.send({ msg: 'Incorrect Password' })
             } else {

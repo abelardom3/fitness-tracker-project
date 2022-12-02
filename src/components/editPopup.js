@@ -15,7 +15,6 @@ const EditPopup = ({ log, close }) => {
             setError(true)
         } else {
             const response = await axios.put(`http://localhost:8000/api/logs/${id}`, newInput)
-            console.log(response.data)
             updateLogs()
             close()
         }
@@ -57,11 +56,6 @@ const EditPopup = ({ log, close }) => {
                     <label className='label-pop'>Date</label>
                     <input className="pop-input" type="text" value={newInput.to_char} onChange={handleChange} name='date' />
                 </div>
-
-                {/* <div className="pop-btn">
-                    <button className="update-btn" onClick={() => { editData(log.fit_id) }}><ion-icon name="create"></ion-icon></button>
-                    <button className="close-edit-btn" onClick={handleXClick}><ion-icon name="close"></ion-icon></button>
-                </div> */}
 
             </form>
 

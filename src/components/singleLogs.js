@@ -1,6 +1,4 @@
-import axios from "axios";
 import React, { useContext } from "react";
-import EditPopup from "./editPopup";
 import { useState } from "react";
 import InputContext from "../Context/InputContext";
 import EditPortal from "./Portals/editPortal";
@@ -10,7 +8,7 @@ import EditPortal from "./Portals/editPortal";
 
 const SingleLogs = ({ log }) => {
 
-    const { updateLogs } = useContext(InputContext)
+
     const [open, setOpen] = useState(false)
 
 
@@ -23,11 +21,7 @@ const SingleLogs = ({ log }) => {
                     <span className="log-text-display"> Duration: </span>{log.duration}
                     <span className="log-text-display"> on </span>{log.to_char}
                 </p>
-                {/* <div className="log-btn">
-                    <button className='edit-btn' ><ion-icon name="create"></ion-icon></button>
-                    <button className="delete-btn" ><ion-icon name="trash"></ion-icon></button>
 
-                </div> */}
             </div>
             <EditPortal close={() => setOpen(false)} open={open} log={log} />
         </>

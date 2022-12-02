@@ -14,7 +14,6 @@ const UserHome = () => {
     useEffect(() => {
         const fetchData = async () => {
             const response = await axios.get(`http://localhost:8000/api/logs/${userInfo.userId}`)
-            console.log(response.data)
             setLogs(response.data)
         }
         fetchData()
@@ -23,6 +22,11 @@ const UserHome = () => {
 
     return (
         <>
+            <div style={{ display: 'flex', justifyContent: 'space-between', background: '#303036' }}>
+                <h1 className="header-text2"><span className="f-text">F</span>ITNESS <span className="t-text">T</span>RACKER</h1>
+            </div>
+
+
             <div className="name-date-header">
                 <h1 className="user-name">Welcome {userInfo.userName}</h1>
                 <h2 className="date-text">{newDate}</h2>

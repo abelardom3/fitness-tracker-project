@@ -35,20 +35,33 @@
     width: 5rem;
     background: #303036;
     color: #ffd60a;
-    transition: .3s ease-out;
+    transition: all .3s ease-out;
     height: 2.5rem;
     position: absolute;
     right: 3rem;
-    top: 4rem;
+    top: 0.5rem;
+    font-size: 20px;
+    border: none;
 }
 
 .logout-btn:hover {
     cursor: pointer;
-    background: #ffd60a;
-    color: #303036;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ffd60a;
 }
 
 .noLogs-text {
     margin: auto;
     color: darkgrey;
+}
+
+.header-text2 {
+    width: 20rem;
+    margin-left: 2rem;
+    font-size: 25px;
+    padding: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 1rem;
+    color: #ffd60a;
+    margin-top: 0.5rem;
 }

@@ -3,6 +3,7 @@ import axios from "axios";
 import { registerSchema } from "./registerSchema";
 import InputContext from "../../Context/InputContext";
 import { useContext, useState } from "react";
+import { Link } from "react-router-dom"
 
 
 const Register = () => {
@@ -13,7 +14,6 @@ const Register = () => {
     const onSubmit = async (values, actions) => {
         try {
             const result = await axios.post('http://localhost:8000/auth/register', values)
-            console.log(result.data)
             localStorage.setItem("accessToken", result.data.accessToken)
             localStorage.setItem('isAuth', true)
             handleLoggingIn()
@@ -38,6 +38,11 @@ const Register = () => {
     return (
 
         <div className="container2">
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <Link to='/' style={{ textDecoration: 'none' }} >
+                    <h1 className="header-text"><span className="f-text">F</span>ITNESS <span className="t-text">T</span>RACKER</h1>
+                </Link>
+            </div>
             <div style={{ paddingTop: '10rem' }}>
                 <div className="register-container">
                     <h1 className="header-reg">Register</h1>
