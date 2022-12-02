@@ -9,7 +9,7 @@ const EditPortal = ({ close, open, log }) => {
         <>
             <div className="over-lay">
                 <div className="module-box">
-                    <button className='close-pop' onClick={() => close()}><ion-icon name="close-outline"></ion-icon></button>
+                    <button className='close-pop' onClick={() => close()}>X</button>
                     <div className="pop-header"><h1 style={{ padding: '5px' }}>Edit</h1></div>
                     <EditPopup log={log} close={close} />
 
