@@ -47,7 +47,7 @@ const LoginForm = () => {
                     <h1 className="header-text"><span className="f-text">F</span>ITNESS <span className="t-text">T</span>RACKER</h1>
                 </Link>
             </div>
-            <div style={{ paddingTop: '10rem' }}>
+            <div >
                 <div className="loginPage-container">
                     <h1 className="loginPage-text">Login</h1>
                     <form className="form-box" onSubmit={handleSubmit} >

@@ -44,7 +44,7 @@ const Register = () => {
                     <h1 className="header-text"><span className="f-text">F</span>ITNESS <span className="t-text">T</span>RACKER</h1>
                 </Link>
             </div>
-            <div style={{ paddingTop: '10rem' }}>
+            <div >
                 <div className="register-container">
                     <h1 className="header-reg">Register</h1>
                     <form onSubmit={handleSubmit} className='form-container'>
