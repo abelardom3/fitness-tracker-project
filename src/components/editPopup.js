@@ -14,7 +14,8 @@ const EditPopup = ({ log, close }) => {
         if (newInput === log) {
             setError(true)
         } else {
-            const response = await axios.put(`http://localhost:8000/api/logs/${id}`, newInput)
+            // const response = await axios.put(`http://localhost:8000/api/logs/${id}`, newInput)
+            const response = await axios.put(`https://fitness-tracker-api.onrender.com/api/logs/${id}`, newInput)
             updateLogs()
             close()
         }
@@ -22,7 +23,8 @@ const EditPopup = ({ log, close }) => {
     }
 
     const handleDelete = async (id) => {
-        await axios.delete(`http://localhost:8000/api/logs/${id}`)
+        // await axios.delete(`http://localhost:8000/api/logs/${id}`)
+        await axios.delete(`https://fitness-tracker-api.onrender.com/api/logs/${id}`)
         close()
         updateLogs()
     }

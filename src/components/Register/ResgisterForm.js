@@ -13,7 +13,8 @@ const Register = () => {
 
     const onSubmit = async (values, actions) => {
         try {
-            const result = await axios.post('http://localhost:8000/auth/register', values)
+            // const result = await axios.post('http://localhost:8000/auth/register', values)
+            const result = await axios.post('https://fitness-tracker-api.onrender.com/auth/register', values)
             localStorage.setItem("accessToken", result.data.accessToken)
             localStorage.setItem('isAuth', true)
             handleLoggingIn()

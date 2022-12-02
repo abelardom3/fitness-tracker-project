@@ -13,7 +13,8 @@ const UserHome = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get(`http://localhost:8000/api/logs/${userInfo.userId}`)
+            // const response = await axios.get(`http://localhost:8000/api/logs/${userInfo.userId}`)
+            const response = await axios.get(`https://fitness-tracker-api.onrender.com/api/logs/${userInfo.userId}`)
             setLogs(response.data)
         }
         fetchData()

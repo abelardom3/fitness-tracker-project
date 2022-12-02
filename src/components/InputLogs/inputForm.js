@@ -9,7 +9,8 @@ const InputForm = () => {
 
     const onSubmit = async (values, actions) => {
         const body = { ...values, userId: userInfo.userId }
-        const response = await axios.post('http://localhost:8000/api/logs', body)
+        // const response = await axios.post('http://localhost:8000/api/logs', body)
+        await axios.post('https://fitness-tracker-api.onrender.com/api/logs', body)
         actions.resetForm()
         updateLogs()
     }

@@ -16,7 +16,8 @@ const LoginForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        const result = await axios.post('http://localhost:8000/auth/login', values)
+        // const result = await axios.post('http://localhost:8000/auth/login', values)
+        const result = await axios.post('https://fitness-tracker-api.onrender.com/auth/login', values)
         if (result.data.errors) {
             setErr(result.data.errors)
         } else if (result.data.msg) {
